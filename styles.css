@@ -27,11 +27,19 @@ p {
 .header {
   grid-area: header;
   background-color: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  padding: 15px 0px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
 .content {
   grid-area: content;
   background-color: #f7eeff;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 
 svg {
@@ -75,4 +83,223 @@ svg {
 
 .nav-split {
   margin-top: 20%;
+}
+
+.header svg {
+  fill: #5b466c;
+}
+
+#query {
+  border-radius: 16px;
+  padding: 5px 200px;
+  border: none;
+  background-color: #eee6f1;
+}
+
+.searchbar {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  padding: 10px 75px;
+}
+
+.profile-items {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  padding: 10px 0px;
+  gap: 50px;
+}
+
+.profile-items svg {
+  width: 2.5em;
+  position: relative;
+  bottom: 10px;
+  right: 30px;
+}
+
+.header-row2 {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+button {
+  background-color: #6628a3;
+  color: #f7eeff;
+  border: none;
+  border-radius: 60px;
+  padding: 10px 25px;
+  margin: 10px;
+  font-weight: bold;
+  place-self: center;
+  justify-self: end;
+}
+
+button:hover {
+  background-color: #421a6a;
+}
+
+.account-greeting {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "pfp greeting"
+    "pfp name";
+  align-items: center;
+}
+
+.account-big {
+  grid-area: pfp;
+  width: 40%;
+  position: relative;
+  left: 80px;
+  bottom: 65px;
+}
+
+.greeting {
+  grid-area: greeting;
+  position: relative;
+  bottom: 45px;
+  right: 10px;
+  color: #1e1a21;
+}
+
+.name {
+  grid-area: name;
+  position: relative;
+  bottom: 100px;
+  right: 10px;
+  color: #1e1a21;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  bottom: 50px;
+  left: 300px;
+}
+
+.username {
+  position: relative;
+  right: 40px;
+}
+
+.account-little {
+  position: relative;
+  left: 60px;
+}
+
+.header svg:hover {
+  fill: #370b5b;
+}
+
+.content h2 {
+  position: relative;
+  left: 50px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 15px;
+  margin-left: 25px;
+}
+
+.card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  padding: 30px;
+  background-color: #fff;
+  display: grid;
+  grid-template-rows: 1fr 50px;
+}
+
+.announcement-card {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.a-card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  padding: 20px 40px;
+  margin: 0px 20px;
+  color: #1e1a21;
+  background-color: #fff;
+}
+
+.trending-card {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.b-card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  padding: 20px 40px;
+  margin: 0px 20px 20px 20px;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.b-card img {
+  width: 75px;
+}
+
+.b-card p {
+  position: relative;
+  right: 40px;
+}
+
+hr {
+  color: #1e1a21;
+}
+
+.card p {
+  color: #59575a;
+}
+
+.card h3 {
+  color: #251335;
+  display: flex;
+  align-items: end;
+  margin: 0;
+}
+
+.card svg {
+  fill: #463a50;
+}
+
+.icons {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  gap: 10px;
+}
+
+.card-words {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+}
+
+#trending,
+.b-card {
+  position: relative;
+  bottom: 160px;
 }
